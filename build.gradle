@@ -1,8 +1,8 @@
 group 'net.shanlab'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
 apply plugin: 'war'
+
 
 sourceCompatibility = 1.5
 
@@ -12,9 +12,16 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'javax', name: 'javaee-api', version: '7.0'
+    compile group: 'javax.el', name: 'javax.el-api', version: '3.0.0'
+    compile group: 'javax.faces', name: 'jsf-api', version: '2.1'
 }
 
 war {
     baseName = 'LearnJSF'
     version = ''
 }
+
+
+
+
