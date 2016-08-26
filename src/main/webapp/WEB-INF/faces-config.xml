@@ -9,9 +9,33 @@
             <base-name>properties.messages</base-name>
             <var>msgs</var>
         </resource-bundle>
+        <resource-bundle>
+            <base-name>properties.messages1</base-name>
+            <var>msgs1</var>
+        </resource-bundle>
 
         <locale-config>
             <default-locale>ru</default-locale>
         </locale-config>
     </application>
+
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>startOver</from-outcome>
+            <to-view-id>javaquiz/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>javaquiz/again.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>javaquiz/failure.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>javaquiz/again.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
